@@ -1,0 +1,14 @@
+%h3
+  Find Any User On Github
+
+= form_tag search_index_path, method: :get, class: "navbar-form navbar-right" do
+  %p
+    = text_field_tag :username, params[:username], class: "form-control"
+    = submit_tag "Search", class: "btn btn-default"
+
+- if @user.present?
+  %h3
+    We Found Your result.
+  %p
+    Click the below user name to view more
+  = link_to "#{@user.login}", search_path(@user.id)

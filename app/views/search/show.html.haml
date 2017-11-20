@@ -1,0 +1,177 @@
+%h4
+  = @user.as_json
+
+%table#table.striped
+  %thead
+    %tr
+      %th
+        %h3 Username
+      %th
+        %h3 ID
+      %th
+        %h3 Avatar_url
+      %th
+        %h3 Gravatar_id
+      %th
+        %h3 URL
+      %th
+        %h3 html_url
+      %th
+        %h3 followers_url
+      %th
+        %h3 following_url
+      %th
+        %h3 gist_url
+      %th
+        %h3 starred_url
+      %th
+        %h3 subscriptions_url
+      %th
+        %h3 organizations_url
+      %th
+        %h3 repos_url
+      %th
+        %h3 events_url
+      %th
+        %h3 received_events_url
+      %th
+        %h3 type
+      %th
+        %h3 site_admin
+      %th
+        %h3 name
+      %th
+        %h3 company
+      %th
+        %h3 blog
+      %th
+        %h3 location
+      %th
+        %h3 email
+      %th
+        %h3 hireable
+      %th
+        %h3 bio
+      %th
+        %h3 public_repos
+      %th
+        %h3 public_gists
+      %th
+        %h3 followers
+      %th
+        %h3 following
+      %th
+        %h3 created_at
+      %th
+        %h3 updated_at
+  %tbody
+    %tr
+      %td
+        %p 
+          = @user.login
+      %td
+        %p 
+          = @user.id
+      %td
+        %p
+          = @user.avatar_url
+      %td
+        %p
+          = @user.gravatar_id
+      %td
+        %p
+          = @user.url
+      %td
+        %p
+          = @user.html_url
+      %td
+        %p
+          = @user.followers_url
+      %td
+        %p
+          = @user.following_url
+      %td
+        %p
+          = @user.gists_url
+      %td
+        %p
+          = @user.starred_url
+      %td
+        %p
+          = @user.subscriptions_url
+      %td
+        %p
+          = @user.organizations_url
+      %td
+        %p
+          = @user.repos_url
+      %td
+        %p
+          = @user.events_url
+      %td
+        %p
+          = @user.received_events_url
+      %td
+        %p
+          = @user.type
+      %td
+        %p
+          = @user.site_admin
+      %td
+        %p
+          = @user.name
+      %td
+        %p
+          = @user.company
+      %td
+        %p
+          = @user.blog
+      %td
+        %p
+          = @user.location
+      %td
+        %p
+          = @user.email
+      %td
+        %p
+          = @user.hireable
+      %td
+        %p
+          = @user.bio
+      %td
+        %p
+          = @user.public_repos
+      %td
+        %p
+          = @user.public_gists
+      %td
+        %p
+          = @user.followers
+      %td
+        %p
+          = @user.following
+      %td
+        %p
+          = @user.created_at
+      %td
+        %p
+          = @user.updated_at
+
+
+:css
+  table th {
+    background-color: grey;
+    color: white;
+  }
+  table th, table td {
+    padding: 5px;
+  }
+  table th {
+    text-align: left;
+  }
+  table th, table td {
+    padding: 5px;
+  }
+  table th {
+    text-align: left;
+  }
