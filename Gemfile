@@ -6,7 +6,6 @@ gem 'rails', '4.2.6'
 gem 'devise'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,6 +31,14 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+group :development do
+  gem 'mysql2', '>= 0.3.13', '< 0.5'
+end
+
+group :production do 
+  gem 'pg'
+end
 
 
 # Use ActiveModel has_secure_password
