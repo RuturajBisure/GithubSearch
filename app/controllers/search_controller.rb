@@ -13,4 +13,8 @@ class SearchController < ApplicationController
   def show
   	@user = Octokit.user(params[:id].to_i)
   end
+
+  def edit
+    @user = Octokit.user(params[:id].to_i)
+  end
 end

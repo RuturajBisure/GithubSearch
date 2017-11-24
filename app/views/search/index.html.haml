@@ -1,14 +1,30 @@
-%h3
-  Find Any User On Github
-
-= form_tag search_index_path, method: :get, class: "navbar-form navbar-right" do
-  %p
-    = text_field_tag :username, params[:username], class: "form-control"
-    = submit_tag "Search", class: "btn btn-default"
-
-- if @user.present?
+.div 
   %h3
-    We Found Your result.
-  %p
-    Click the below user name to view more
-  = link_to "#{@user.login}", search_path(@user.id)
+    Find Any User On Github
+
+  = form_tag search_index_path, method: :get, class: "navbar-form navbar-right" do
+    %p.box-idiom
+      = text_field_tag :username, params[:username], class: "form-control"
+      = submit_tag "Search", class: "btn btn-default"
+  - if @user.present?
+    %h4.success{:style => 'color: green;'}
+      We Found Your Username.
+    %p
+      Click the below user name to view more
+    = link_to "#{@user.login}", search_path(@user.id)
+  -else
+    - if params[:username] == ""
+      %h5.error-msg{:style => 'color: red;'}
+        Username Can't Be Blank
+    - else
+      %h5.error-msg{:style => 'color: red;'}
+        Cant Find The Username. Please check spelling & try again.
+
+
+:css
+  .box-idiom{margin-right: 56px;
+    width: 322px; }
+  /   transition:background 1s ease-in;}
+  / .success{color: green}
+  .div {margin: 0px auto; width:400px;}
+
